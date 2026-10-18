@@ -1,0 +1,13 @@
+.catalog-template-container {
+  min-height: 85vh;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background-color: #f8f9fa;
+}
+
+.catalog-header-title {
+  color: #1e293b;
+  border-bottom: 3px solid #f43f5e;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}

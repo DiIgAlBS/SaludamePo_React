@@ -1,0 +1,11 @@
+.btn-custom-danger {
+  background-color: #f43f5e;
+  border-color: #f43f5e;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-custom-danger:hover {
+  background-color: #e11d48;
+  border-color: #e11d48;
+}
