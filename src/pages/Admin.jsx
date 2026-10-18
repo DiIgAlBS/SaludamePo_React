@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Tabs, Tab, Table, Button, Modal, Form, Badge, Card, Row, Col, Alert } from 'react-bootstrap';
 import famososIniciales from '../data/famosos';
-import blogsIniciales from '../data/blogsData';
+import blogsIniciales from '../data/BlogsData';
 
 function Admin() {
   const [key, setKey] = useState('catalogo');
