@@ -1,5 +1,5 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import blogsIniciales from '../data/blogsData';
+import blogsIniciales from '../data/BlogsData';
 
 function Blogs() {
   const noticias = JSON.parse(localStorage.getItem('blogs')) || blogsIniciales;
