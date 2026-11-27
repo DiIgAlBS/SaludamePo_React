@@ -14,7 +14,7 @@ const famosos = [
     categoria: "Infantil",
     precio: 18000,
     descripcion: "¡Un saludo eufórico desde Fondo de Bikini!",
-    imagen: "/imagenes/bob esponja.png",
+    imagen: "/imagenes/bob esponja.webp",
     video: "/videos/promocionales/bob esponja.mp4"
   },
   {
@@ -51,7 +51,7 @@ const famosos = [
     categoria: "Infantil",
     precio: 15000,
     descripcion: "Elmo quiere saludarte y enviarte un gran abrazo de Plaza Sésamo.",
-    imagen: "/imagenes/elmo.png",
+    imagen: "/imagenes/elmo.webp",
     video: "/videos/elmo.mp4"
   },
   {
@@ -97,7 +97,7 @@ const famosos = [
     categoria: "Comediantes",
     precio: 25000,
     descripcion: "Un saludo lleno de risas, buena onda y el estilo único de la Botota.",
-    imagen: "/imagenes/famosos/botota.jpeg",
+    imagen: "/imagenes/famosos/botota.webp",
     video: "/videos/botota.mp4",
     popular: true
   },
@@ -107,7 +107,7 @@ const famosos = [
     categoria: "Comediantes",
     precio: 28000,
     descripcion: "El humor clásico de Checopete directo para tus amigos o familiares.",
-    imagen: "/imagenes/famosos/checopete.png",
+    imagen: "/imagenes/famosos/checopete.webp",
     video: null
   },
   {
@@ -116,7 +116,7 @@ const famosos = [
     categoria: "Televisión",
     precio: 30000,
     descripcion: "¡Fajate un saludo inolvidable con la Chilindrina de la Vecindad!",
-    imagen: "/imagenes/famosos/chilindrina.avif",
+    imagen: "/imagenes/famosos/chilindrina.webp",
     video: "/videos/chilindrina.mp4"
   },
   {
@@ -125,7 +125,7 @@ const famosos = [
     categoria: "Comediantes",
     precio: 24000,
     descripcion: "Roberto Saldías, 'El Chino', listo para enviarte un saludo lleno de risas y picardía.",
-    imagen: "/imagenes/famosos/chino.png",
+    imagen: "/imagenes/famosos/chino.webp",
     video: null
   },
   {
@@ -134,7 +134,7 @@ const famosos = [
     categoria: "Comediantes",
     precio: 22000,
     descripcion: "Saludos criollos llenos de picardía y buen humor campesino.",
-    imagen: "/imagenes/famosos/filomeno.png",
+    imagen: "/imagenes/famosos/filomeno.webp",
     video: "/videos/filomeno.mp4"
   },
   {
@@ -143,7 +143,7 @@ const famosos = [
     categoria: "Televisión",
     precio: 27000,
     descripcion: "Un saludo con la chispa y alegría del recordado personaje de Casado con Hijos.",
-    imagen: "/imagenes/famosos/kena.jpg",
+    imagen: "/imagenes/famosos/kena.webp",
     video: null
   },
   {
@@ -162,7 +162,7 @@ const famosos = [
     categoria: "Comediantes",
     precio: 26000,
     descripcion: "Risas garantizadas con las travesuras y mensajes de Miguelito.",
-    imagen: "/imagenes/famosos/miguelito.jpg",
+    imagen: "/imagenes/famosos/miguelito.webp",
     video: null
   },
   {
@@ -180,7 +180,7 @@ const famosos = [
     categoria: "Comediantes",
     precio: 24000,
     descripcion: "Patricio Mejías, 'El Pato', con toda la chispa y humor de Los Atletas de la Risa.",
-    imagen: "/imagenes/famosos/pato.png",
+    imagen: "/imagenes/famosos/pato.webp",
     video: "/videos/waton.mp4"
   }
 ];
