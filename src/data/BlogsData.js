@@ -25,10 +25,9 @@ const blogsData = [
       "/imagenes/naruto.webp",
       "/imagenes/cartman.webp",
       "/imagenes/elmo.webp",
-      "/imagenes/bob-esponja.webp",
-      "/imagenes/shrek.webp"
+      "/imagenes/bob-esponja.webp"
     ],
-    resumen: "Naruto Uzumaki, Eric Cartman, Elmo, Bob Esponja y Shrek ya están disponibles para grabar saludos personalizados con entrega digital en menos de 48 horas."
+    resumen: "Naruto Uzumaki, Eric Cartman, Elmo y Bob Esponja ya están disponibles para grabar saludos personalizados con entrega digital en menos de 48 horas."
   },
   {
     id: 4,
@@ -40,10 +39,9 @@ const blogsData = [
       "/imagenes/famosos/kramer.webp",
       "/imagenes/famosos/botota.webp",
       "/imagenes/famosos/chino.webp",
-      "/imagenes/famosos/pato.webp",
-      "/imagenes/famosos/filomeno.webp"
+      "/imagenes/famosos/pato.webp"
     ],
-    resumen: "Stefan Kramer, Botota Fox y Los Atletas de la Risa (Chino, Pato y Filomeno) lideran los encargos para cumpleaños y despedidas con rutinas y dedicatorias a medida."
+    resumen: "Stefan Kramer, Botota Fox y Los Atletas de la Risa (El Chino y El Pato) lideran los encargos para cumpleaños y despedidas con rutinas y dedicatorias a medida."
   },
   {
     id: 5,

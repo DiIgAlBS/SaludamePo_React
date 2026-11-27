@@ -26,6 +26,13 @@ function Blogs() {
     cargarBlogs();
   }, []);
 
+  const estiloImagen = {
+    height: '260px',
+    objectFit: 'contain',
+    backgroundColor: '#f8f9fa',
+    padding: '8px'
+  };
+
   return (
     <Container className="my-5">
       <div className="text-center mb-5">
@@ -48,14 +55,14 @@ function Blogs() {
               <Col key={blog.id || blog.titulo} md={6} lg={4}>
                 <Card className="h-100 shadow-sm border-0 overflow-hidden">
                   {listaImagenes.length > 1 ? (
-                    <Carousel interval={3000} indicators={true} controls={true}>
+                    <Carousel interval={3000} indicators={true} controls={true} variant="dark">
                       {listaImagenes.map((imgSrc, idx) => (
                         <Carousel.Item key={idx}>
                           <img
                             className="d-block w-100"
                             src={imgSrc}
                             alt={`${blog.titulo} - ${idx + 1}`}
-                            style={{ height: '200px', objectFit: 'cover' }}
+                            style={estiloImagen}
                           />
                         </Carousel.Item>
                       ))}
@@ -65,7 +72,7 @@ function Blogs() {
                       variant="top"
                       src={listaImagenes[0]}
                       alt={blog.titulo}
-                      style={{ height: '200px', objectFit: 'cover' }}
+                      style={estiloImagen}
                     />
                   ) : null}
 
