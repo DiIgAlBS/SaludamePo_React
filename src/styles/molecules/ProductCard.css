@@ -1,0 +1,14 @@
+.product-card-img {
+  height: 200px;
+  object-fit: contain;
+  background-color: #f8f9fa;
+}
+
+.product-card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
