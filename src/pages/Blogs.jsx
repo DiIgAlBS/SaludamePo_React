@@ -1,19 +1,24 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Badge, Spinner, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Badge, Spinner, Carousel } from 'react-bootstrap';
 import { apiFetch } from '../services/api';
+import blogsData from '../data/BlogsData';
 
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [cargando, setCargando] = useState(true);
-  const [error, setError] = useState('');
 
   useEffect(() => {
     const cargarBlogs = async () => {
       try {
         const data = await apiFetch('/blogs');
-        setBlogs(data);
+        if (Array.isArray(data) && data.length > 0) {
+          setBlogs(data);
+        } else {
+          setBlogs(blogsData);
+        }
       } catch (err) {
-        setError(err.message || 'Error al cargar las noticias.');
+        console.warn('Usando respaldo local de blogs:', err.message);
+        setBlogs(blogsData);
       } finally {
         setCargando(false);
       }
@@ -33,36 +38,49 @@ function Blogs() {
           <Spinner animation="border" variant="danger" />
           <p className="mt-2 text-muted">Cargando noticias...</p>
         </div>
-      ) : error ? (
-        <Alert variant="danger">{error}</Alert>
-      ) : blogs.length === 0 ? (
-        <Alert variant="info" className="text-center">
-          Aún no hay noticias publicadas.
-        </Alert>
       ) : (
         <Row className="g-4">
-          {blogs.map((blog) => (
-            <Col key={blog.id} md={6} lg={4}>
-              <Card className="h-100 shadow-sm border-0">
-                {blog.imagenUrl && (
-                  <Card.Img
-                    variant="top"
-                    src={blog.imagenUrl}
-                    alt={blog.titulo}
-                    style={{ height: '200px', objectFit: 'cover' }}
-                  />
-                )}
-                <Card.Body className="d-flex flex-column">
-                  <div className="d-flex justify-content-between align-items-center mb-2">
-                    <Badge bg="danger">{blog.categoria}</Badge>
-                    <small className="text-muted">{blog.fechaPublicacion}</small>
-                  </div>
-                  <Card.Title className="fw-bold">{blog.titulo}</Card.Title>
-                  <Card.Text className="text-muted flex-grow-1">{blog.resumen}</Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
+          {blogs.map((blog) => {
+            const localMatch = blogsData.find((item) => item.titulo === blog.titulo);
+            const listaImagenes = localMatch?.imagenes || (blog.imagenUrl ? [blog.imagenUrl] : []);
+
+            return (
+              <Col key={blog.id || blog.titulo} md={6} lg={4}>
+                <Card className="h-100 shadow-sm border-0 overflow-hidden">
+                  {listaImagenes.length > 1 ? (
+                    <Carousel interval={3000} indicators={true} controls={true}>
+                      {listaImagenes.map((imgSrc, idx) => (
+                        <Carousel.Item key={idx}>
+                          <img
+                            className="d-block w-100"
+                            src={imgSrc}
+                            alt={`${blog.titulo} - ${idx + 1}`}
+                            style={{ height: '200px', objectFit: 'cover' }}
+                          />
+                        </Carousel.Item>
+                      ))}
+                    </Carousel>
+                  ) : listaImagenes.length === 1 ? (
+                    <Card.Img
+                      variant="top"
+                      src={listaImagenes[0]}
+                      alt={blog.titulo}
+                      style={{ height: '200px', objectFit: 'cover' }}
+                    />
+                  ) : null}
+
+                  <Card.Body className="d-flex flex-column">
+                    <div className="d-flex justify-content-between align-items-center mb-2">
+                      <Badge bg="danger">{blog.categoria}</Badge>
+                      <small className="text-muted">{blog.fechaPublicacion}</small>
+                    </div>
+                    <Card.Title className="fw-bold">{blog.titulo}</Card.Title>
+                    <Card.Text className="text-muted flex-grow-1">{blog.resumen}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
         </Row>
       )}
     </Container>
