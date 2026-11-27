@@ -20,14 +20,15 @@ const blogsData = [
     categoria: "Novedades",
     titulo: "¡Llegan los personajes más queridos del anime y la animación!",
     fechaPublicacion: "2026-11-26",
-    imagenUrl: "/imagenes/famosos/naruto.webp",
+    imagenUrl: "/imagenes/naruto.webp",
     imagenes: [
-      "/imagenes/famosos/naruto.webp",
-      "/imagenes/famosos/goku.webp",
-      "/imagenes/famosos/cartman.webp",
-      "/imagenes/elmo.webp"
+      "/imagenes/naruto.webp",
+      "/imagenes/cartman.webp",
+      "/imagenes/elmo.webp",
+      "/imagenes/bob-esponja.webp",
+      "/imagenes/shrek.webp"
     ],
-    resumen: "Naruto Uzumaki, Goku, Eric Cartman y Elmo ya están disponibles para grabar saludos personalizados con entrega digital en menos de 48 horas."
+    resumen: "Naruto Uzumaki, Eric Cartman, Elmo, Bob Esponja y Shrek ya están disponibles para grabar saludos personalizados con entrega digital en menos de 48 horas."
   },
   {
     id: 4,
@@ -38,9 +39,11 @@ const blogsData = [
     imagenes: [
       "/imagenes/famosos/kramer.webp",
       "/imagenes/famosos/botota.webp",
-      "/imagenes/famosos/atletas.webp"
+      "/imagenes/famosos/chino.webp",
+      "/imagenes/famosos/pato.webp",
+      "/imagenes/famosos/filomeno.webp"
     ],
-    resumen: "Stefan Kramer, Botota Fox y Los Atletas de la Risa lideran los encargos para cumpleaños y despedidas con rutinas y dedicatorias a medida."
+    resumen: "Stefan Kramer, Botota Fox y Los Atletas de la Risa (Chino, Pato y Filomeno) lideran los encargos para cumpleaños y despedidas con rutinas y dedicatorias a medida."
   },
   {
     id: 5,
@@ -51,5 +54,4 @@ const blogsData = [
     resumen: "Elige a tu artista favorito en el catálogo, escribe tu dedicatoria personalizada y recibe tu video listo para compartir directamente en tu correo."
   }
 ];
-
 export default blogsData;
